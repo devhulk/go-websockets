@@ -31,6 +31,7 @@ Backend
 ## Resources
 
 - [What are Websockets?](https://datatracker.ietf.org/doc/html/rfc6455)
+    
     "Historically, creating web applications that need bidirectional
     communication between a client and a server (e.g., instant messaging
     and gaming applications) has required an abuse of HTTP to poll the
