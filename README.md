@@ -9,7 +9,8 @@ Front-End Code -> ```/web```
 
 Backend Code -> ```*.go``` files
 
-Run the project with:
+Run the project with (If you change any of the *.go you will need to quit and re-run this command):
+
 ```go run *.go```
 
 Then go to ```localhost:8080/wechat/``` in your browser of choice.
