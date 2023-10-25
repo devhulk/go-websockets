@@ -44,20 +44,32 @@ window.onload = function () {
             var messages = evt.data.split('\n');
             for (var i = 0; i < messages.length; i++) {
                 finalMessage = JSON.parse(messages[i])
+                var container = document.createElement("div");
+                container.style.display = "flex"
+                var profile = document.createElement("i");
+                profile.classList.add("fa")
+                profile.classList.add("fa-user")
+                profile.style.fontSize = "48px"
+
+
                 var item = document.createElement("div");
+                container.append(item)
+                container.append(profile)
                 item.id = finalMessage.id
-                //item.style.color = finalMessage.color
                 if (sessionStorage.getItem("sessionID") == finalMessage.id ) {
                     item.classList.add("msg")
                     item.classList.add("sent")
                     item.style.background = sessionStorage.getItem("randomColor")
+                    profile.style.color = sessionStorage.getItem("randomColor")
                 } else {
                     item.classList.add("msg")
                     item.classList.add("rcvd")
                     item.style.background = finalMessage.color 
+                    profile.style.color = finalMessage.color 
                 }
                 item.innerText = finalMessage.value;
-                appendLog(item);
+                //appendLog(item);
+                appendLog(container);
             }
         };
     } else {
